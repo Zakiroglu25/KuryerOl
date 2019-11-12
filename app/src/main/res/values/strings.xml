@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">KuryerOl</string>
+    <string name="title_activity_main_menu_archive">MainMenuArchive</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_sifarish">Cari Sifariş</string>
+    <string name="menu_arxiv">Arxiv</string>
+    <string name="menu_online_chat">Onlayn çat</string>
+    <string name="menu_ofisezeng">Ofisə zəng</string>
+    <string name="menu_startwork">İşə başla</string>
+    <string name="menu_fasile">Fasilə</string>
+    <string name="menu_cixis">Çıxış</string>
+    <string name="open_drawer">open</string>
+    <string name="close_drawer">close</string>
+    <string name="your_string_here">
+        This is an <u>underline</u>.
+    </string>
+</resources>

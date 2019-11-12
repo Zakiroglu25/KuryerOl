@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/cari_sifaris"
+        android:title="@string/menu_sifarish" />
+    <item
+        android:id="@+id/nav_archive"
+        android:title="@string/menu_arxiv" />
+    <item
+        android:id="@+id/nav_online_chat"
+        android:title="@string/menu_online_chat" />
+    <item
+        android:id="@+id/nav_office_call"
+        android:title="@string/menu_ofisezeng" />
+    <item
+        android:id="@+id/nav_startwork"
+        android:title="@string/menu_startwork" />
+    <item
+        android:id="@+id/nav_fasile"
+        android:title="@string/menu_fasile" />
+
+    <item
+        android:id="@+id/nav_cixis"
+        android:title="@string/menu_cixis" />
+
+
+
+</menu>
