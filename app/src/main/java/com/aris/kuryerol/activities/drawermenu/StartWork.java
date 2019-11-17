@@ -81,6 +81,7 @@ public class StartWork extends AppCompatActivity {
     private void check(){
         if(checkBox1.isChecked() && checkBox2.isChecked() && checkBox3.isChecked() && checkBox4.isChecked()){
             buttonStart.setEnabled(true);
+            buttonStart.getShadowRadius();
             buttonStart.setBackgroundColor(Color.RED);
             System.out.println("selected1");
         }else{

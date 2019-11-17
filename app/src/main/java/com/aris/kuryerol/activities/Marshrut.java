@@ -21,7 +21,7 @@ import com.yandex.mapkit.geometry.Point;
 import com.yandex.mapkit.map.CameraPosition;
 import com.yandex.mapkit.mapview.MapView;
 
-public class Order extends AppCompatActivity {
+public class Marshrut extends AppCompatActivity {
 
     private MapView mapview;
 
@@ -37,23 +37,14 @@ public class Order extends AppCompatActivity {
         MapKitFactory.initialize(this);
 
 
-        setContentView(R.layout.activity_order);
-
-        Button button = findViewById(R.id.btn_666);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Order.this, OrderAccept.class);
-                startActivity(intent);
-            }
-        });
+        setContentView(R.layout.activity_marshrut);
 
 
         // todo imtina et altinnan xett(underline)
         TextView textView = findViewById(R.id.textView20 ) ;
         SpannableString content = new SpannableString( "Imtina et" ) ;
         content.setSpan( new UnderlineSpan() , 0 , content.length() , 0 ) ;
-        textView.setText(content) ;
+      //  textView.setText(content) ;
 
 
         mapview = findViewById(R.id.mapview);
@@ -83,7 +74,7 @@ public class Order extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-     //   getMenuInflater().inflate(R.menu.add_menu, menu);
+        //   getMenuInflater().inflate(R.menu.add_menu, menu);
         return true;
     }
 
@@ -104,3 +95,4 @@ public class Order extends AppCompatActivity {
     }
 
 }
+

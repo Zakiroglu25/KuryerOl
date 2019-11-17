@@ -2,28 +2,69 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lemar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/lemar"
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView24"
+        android:id="@+id/txt_order_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:text="TextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Aydan Cəlilova"
+        android:textColor="#290D44"
+        android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="39dp"
-        android:text="TextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="012 345 67 89"
+        android:textColor="#290D44"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_order_name" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="M. Axundov 26"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23" />
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="171dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="348dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="45.00 AZN"
+        android:textColor="#290D44"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
 </androidx.constraintlayout.widget.ConstraintLayout>

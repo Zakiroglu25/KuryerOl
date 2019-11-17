@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.aris.kuryerol">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activities.Marshrut"></activity>
         <activity android:name=".activities.DeliveredOrder" />
         <activity android:name=".activities.OrderAccept" />
         <activity android:name=".activities.Order" />
         <activity android:name=".activities.drawermenu.FasileActivity" />
-        <activity android:name=".activities.drawermenu.SifarishlerimActivitiy"/>
+        <activity android:name=".activities.drawermenu.SifarishlerimActivitiy" />
         <activity android:name=".activities.drawermenu.StartWork" />
         <activity android:name=".activities.drawermenu.CallOfficceActivity" />
         <activity android:name=".activities.drawermenu.OnlineChatActivity" />

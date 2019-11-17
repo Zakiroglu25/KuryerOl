@@ -45,7 +45,7 @@
         android:text="YG - 102345"
         android:textColor="#B6263E"
         android:textSize="17sp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btn_telefon_sc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -79,7 +79,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_telefon_sc"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -87,14 +87,16 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/btn_sifarish_green"
         android:text="Telefon"
+
+        android:drawableLeft="@drawable/ic_path"
         android:textAllCaps="false"
         android:textColor="#fff"
-        app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_sg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/btn_marshurut_3"
+        android:id="@+id/btn_marshurut_sg"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -106,22 +108,21 @@
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btn_telefon_sc"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="179dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="128dp"
+        android:layout_width="183dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/btn_chek"
         android:text="Sifariş"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_telefon_sc" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -147,18 +148,17 @@
         android:id="@+id/btn_goturdum"
         android:layout_width="218dp"
         android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginTop="11dp"
         android:background="@drawable/btn_sifariscatdirildi"
         android:onClick="dialogevent"
         android:text="Sifarişi götürdüm"
         android:textAllCaps="false"
         android:textColor="#fff"
         android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

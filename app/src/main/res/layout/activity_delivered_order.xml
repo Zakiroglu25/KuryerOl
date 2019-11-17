@@ -71,7 +71,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_telefon_sc"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="16dp"
@@ -81,12 +81,12 @@
         android:text="Telefon"
         android:textAllCaps="false"
         android:textColor="#fff"
-        app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_sg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <Button
-        android:id="@+id/btn_marshurut_3"
+        android:id="@+id/btn_marshurut_sg"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
@@ -98,7 +98,7 @@
         android:textColor="#fff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toEndOf="@+id/btn_telefon_sc"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <com.google.android.material.appbar.AppBarLayout

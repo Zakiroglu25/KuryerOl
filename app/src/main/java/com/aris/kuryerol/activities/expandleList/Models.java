@@ -3,71 +3,40 @@ package com.aris.kuryerol.activities.expandleList;
 import java.time.LocalDate;
 
 public class Models {
-    private String orderNo;
-    private String cafeName;
-    private String cafePhoneNumber;
-    private String cafeAddress;
-    private LocalDate orderDate;
+    private String name;
+    private String price;
+    private int image;
 
-    public Models(String orderNo, String cafeName, String cafePhoneNumber, String cafeAddress, LocalDate orderDate) {
-        this.orderNo = orderNo;
-        this.cafeName = cafeName;
-        this.cafePhoneNumber = cafePhoneNumber;
-        this.cafeAddress = cafeAddress;
-        this.orderDate = orderDate;
+    public Models(String name, String price, int image) {
+        this.name = name;
+        this.price = price;
+        this.image = image;
     }
 
     public Models() {
     }
 
-    @Override
-    public String toString() {
-        return "Models{" +
-                "orderNo='" + orderNo + '\'' +
-                ", cafeName='" + cafeName + '\'' +
-                ", cafePhoneNumber='" + cafePhoneNumber + '\'' +
-                ", cafeAddress='" + cafeAddress + '\'' +
-                ", orderDate=" + orderDate +
-                '}';
+    public String getName() {
+        return name;
     }
 
-    public String getOrderNo() {
-        return orderNo;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setOrderNo(String orderNo) {
-        this.orderNo = orderNo;
+    public String getPrice() {
+        return price;
     }
 
-    public String getCafeName() {
-        return cafeName;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
-    public void setCafeName(String cafeName) {
-        this.cafeName = cafeName;
+    public int getImage() {
+        return image;
     }
 
-    public String getCafePhoneNumber() {
-        return cafePhoneNumber;
-    }
-
-    public void setCafePhoneNumber(String cafePhoneNumber) {
-        this.cafePhoneNumber = cafePhoneNumber;
-    }
-
-    public String getCafeAddress() {
-        return cafeAddress;
-    }
-
-    public void setCafeAddress(String cafeAddress) {
-        this.cafeAddress = cafeAddress;
-    }
-
-    public LocalDate getOrderDate() {
-        return orderDate;
-    }
-
-    public void setOrderDate(LocalDate orderDate) {
-        this.orderDate = orderDate;
+    public void setImage(int image) {
+        this.image = image;
     }
 }
