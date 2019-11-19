@@ -1,19 +1,19 @@
-package com.aris.kuryerol.activities.expandleList;
+package com.aris.kuryerol.activities.models;
 
 import java.time.LocalDate;
 
-public class Models {
+public class Order  {
     private String name;
     private String price;
     private int image;
 
-    public Models(String name, String price, int image) {
+    public Order(String name, String price, int image) {
         this.name = name;
         this.price = price;
         this.image = image;
     }
 
-    public Models() {
+    public Order() {
     }
 
     public String getName() {

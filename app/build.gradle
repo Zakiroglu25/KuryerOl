@@ -41,4 +41,7 @@ dependencies {
     implementation 'com.yandex.android:places:3.3.1'
     implementation 'com.yandex.android:search:3.3.1'
     implementation 'com.yandex.android:transport:3.3.1'
+    implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
+
+
 }

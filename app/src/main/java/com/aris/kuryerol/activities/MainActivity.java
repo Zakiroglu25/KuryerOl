@@ -5,6 +5,8 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,6 +14,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.aris.kuryerol.R;
@@ -48,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer);
         drawerLayout.addDrawerListener(drawerToggle);
-       // navigationView.setItemTextColor(ColorStateList.valueOf(Color.RED));
+        // navigationView.setItemTextColor(ColorStateList.valueOf(Color.RED));
 
         drawerToggle.setDrawerIndicatorEnabled(true);
         drawerToggle.syncState();
@@ -56,9 +59,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         final NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(this);
-
-
-
 
 
 //        Menu menu = navigationView.getMenu();
@@ -108,5 +108,24 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
+
+    public void toolbarClick(View view) {
+        switch (view.getId()) {
+            case R.id.toolbar_menu_iv:
+                drawerLayout.openDrawer(GravityCompat.START);
+                break;
+            case R.id.toolbar_message_iv:
+                ImageView imageView = findViewById(R.id.toolbar_message_iv);
+                imageView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, MessageActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                break;
+        }
+    }
 }
+
 

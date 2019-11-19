@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aris.kuryerol">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -10,24 +11,30 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".activities.Marshrut"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".activities.MessageActivity"></activity>
+        <activity android:name=".activities.MaketDialog" />
+        <activity android:name=".activities.Marshrut" />
         <activity android:name=".activities.DeliveredOrder" />
         <activity android:name=".activities.OrderAccept" />
         <activity android:name=".activities.Order" />
         <activity android:name=".activities.drawermenu.FasileActivity" />
         <activity android:name=".activities.drawermenu.SifarishlerimActivitiy" />
-        <activity android:name=".activities.drawermenu.StartWork" />
+        <activity android:name=".activities.drawermenu.StartWork" >
+
+        </activity>
         <activity android:name=".activities.drawermenu.CallOfficceActivity" />
         <activity android:name=".activities.drawermenu.OnlineChatActivity" />
-        <activity android:name=".activities.drawermenu.ArchiveActivity" />
-        <activity android:name=".activities.Authentication">
+        <activity android:name=".activities.drawermenu.ArchiveActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activities.Authentication"/>
+
         <activity android:name=".activities.MainActivity" />
     </application>
 

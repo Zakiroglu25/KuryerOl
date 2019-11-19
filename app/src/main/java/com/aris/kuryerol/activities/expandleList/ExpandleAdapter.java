@@ -2,33 +2,41 @@ package com.aris.kuryerol.activities.expandleList;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aris.kuryerol.R;
+import com.aris.kuryerol.activities.drawermenu.StartWork;
+import com.aris.kuryerol.activities.models.Header;
 
 import java.util.HashMap;
 import java.util.List;
 
 public class ExpandleAdapter extends BaseExpandableListAdapter {
-    private Context _context;
-    private List<String> _listDataHeader; // header titles
+    private List<String> headers; // header titles
     // child data in format of header title, child title
-    private HashMap<String, List<String>> _listDataChild;
+    private HashMap<String, List<Object>> hashMap;
 
-    public ExpandleAdapter(Context context, List<String> listDataHeader,
-                                 HashMap<String, List<String>> listChildData) {
-        this._context = context;
-        this._listDataHeader = listDataHeader;
-        this._listDataChild = listChildData;
+    private final int ORDER = 1;
+    private final int HEADER = 2;
+    private final int FOOTER = 3;
+
+
+    public ExpandleAdapter(List<String> listDataHeader,
+                           HashMap<String, List<Object>> listChildData) {
+
+        this.headers = listDataHeader;
+        this.hashMap = listChildData;
     }
 
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition))
+        return this.hashMap.get(this.headers.get(groupPosition))
                 .get(childPosititon);
     }
 
@@ -41,36 +49,64 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {
 
-        final String childText = (String) getChild(groupPosition, childPosition);
 
-        if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = infalInflater.inflate(R.layout.lit_item_archive, null);
+        int layId;
+        Log.e(TAG, "getChildView: " );
+
+        switch (getChildType(groupPosition, childPosition)) {
+
+            case HEADER:
+
+                layId = R.layout.lit_item_archive;
+                break;
+
+            case FOOTER:
+
+                layId = R.layout.list_item_footer;
+
+                break;
+
+
+            case ORDER:
+                layId = R.layout.list_item_order;
+
+
+                break;
+            default:
+                throw new RuntimeException("WTF");
         }
 
-        TextView txtListChild = (TextView) convertView
-                .findViewById(R.id.textView24);
-        TextView xtListChild = (TextView) convertView
-                .findViewById(R.id.txt_order_name);
 
-        txtListChild.setText(childText);
+        if (convertView == null) {
+            LayoutInflater infalInflater = (LayoutInflater) parent.getContext()
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            convertView = infalInflater.inflate(layId, null);
+        }
+
+//        TextView txtListChild = (TextView) convertView
+//                .findViewById(R.id.textView24);
+//        TextView xtListChild = (TextView) convertView
+//                .findViewById(R.id.txt_order_name);
+//
+//
+//        txtListChild.setText(childText);
         return convertView;
+
     }
 
     @Override
     public int getChildrenCount(int groupPosition) {
-        return this._listDataChild.get(this._listDataHeader.get(groupPosition)).size();
+        return this.hashMap.get(this.headers.get(groupPosition)).size();
     }
 
     @Override
     public Object getGroup(int groupPosition) {
-        return this._listDataHeader.get(groupPosition);
+        return headers.get(groupPosition);
     }
 
     @Override
     public int getGroupCount() {
-        return this._listDataHeader.size();
+        return headers.size();
     }
 
     @Override
@@ -78,12 +114,14 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
         return groupPosition;
     }
 
+    private static final String TAG = "ExpandleAdapter";
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {
         String headerTitle = (String) getGroup(groupPosition);
         if (convertView == null) {
-            LayoutInflater infalInflater = (LayoutInflater) this._context
+
+            LayoutInflater infalInflater = (LayoutInflater) parent.getContext()
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = infalInflater.inflate(R.layout.lsit_group_archive, null);
         }
@@ -94,6 +132,26 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
         lblListHeader.setText(headerTitle);
 
         return convertView;
+    }
+
+    @Override
+    public int getChildType(int groupPosition, int childPosition) {
+        Object object = getChild(groupPosition, childPosition);
+
+        if (object instanceof String) {
+            return HEADER;
+        } else if (object instanceof Double) {
+            return ORDER;
+        } else if (object instanceof Float) {
+            return FOOTER;
+        }
+
+        throw new RuntimeException("Object not supported");
+    }
+
+    @Override
+    public int getChildTypeCount() {
+        return 4;
     }
 
     @Override
