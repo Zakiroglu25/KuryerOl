@@ -40,6 +40,8 @@ public class Marshrut extends AppCompatActivity {
         setContentView(R.layout.activity_marshrut);
 
 
+
+
         // todo imtina et altinnan xett(underline)
         TextView textView = findViewById(R.id.textView20 ) ;
         SpannableString content = new SpannableString( "Imtina et" ) ;

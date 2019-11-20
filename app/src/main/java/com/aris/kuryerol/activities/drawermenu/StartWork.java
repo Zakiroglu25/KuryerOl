@@ -1,6 +1,7 @@
 package com.aris.kuryerol.activities.drawermenu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -24,6 +25,12 @@ public class StartWork extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_work);
+
+
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
+
 
         buttonStart = findViewById(R.id.buttonStart);
         checkBox1 = findViewById(R.id.checkBox);

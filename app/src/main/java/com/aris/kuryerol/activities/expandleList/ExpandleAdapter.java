@@ -51,7 +51,7 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
 
 
         int layId;
-        Log.e(TAG, "getChildView: " );
+        Log.e(TAG, "getChildView: ");
 
         switch (getChildType(groupPosition, childPosition)) {
 
@@ -70,7 +70,6 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
             case ORDER:
                 layId = R.layout.list_item_order;
 
-
                 break;
             default:
                 throw new RuntimeException("WTF");
@@ -83,13 +82,7 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
             convertView = infalInflater.inflate(layId, null);
         }
 
-//        TextView txtListChild = (TextView) convertView
-//                .findViewById(R.id.textView24);
-//        TextView xtListChild = (TextView) convertView
-//                .findViewById(R.id.txt_order_name);
-//
-//
-//        txtListChild.setText(childText);
+
         return convertView;
 
     }
@@ -115,6 +108,7 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
     }
 
     private static final String TAG = "ExpandleAdapter";
+
     @Override
     public View getGroupView(int groupPosition, boolean isExpanded,
                              View convertView, ViewGroup parent) {

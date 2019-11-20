@@ -1,8 +1,6 @@
 package com.aris.kuryerol.activities;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
-    NavigationView navigationView;
+    NavigationView navView;
     private SwitchCompat switcher;
 
 
@@ -51,7 +49,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer);
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_drawer, R.string.close_drawer);
         drawerLayout.addDrawerListener(drawerToggle);
-        // navigationView.setItemTextColor(ColorStateList.valueOf(Color.RED));
 
         drawerToggle.setDrawerIndicatorEnabled(true);
         drawerToggle.syncState();
@@ -59,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         final NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(this);
+
 
 
 //        Menu menu = navigationView.getMenu();

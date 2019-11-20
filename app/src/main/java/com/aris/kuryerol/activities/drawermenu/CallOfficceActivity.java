@@ -22,17 +22,21 @@ public class CallOfficceActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_officce);
 
-         btn = findViewById(R.id.btn_call);
-    }
-    public void onDialButton(View v) {
 
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("0558567755"));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
 
-            return;
+    Button telefon = findViewById(R.id.btn_office_call);
+
+    telefon.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            String s = "10digits";
+
+            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+            callIntent.setData(Uri.parse("tel:123456789"));
+            startActivity(callIntent);
         }
-        startActivity(intent);
+    });
+
     }
 }
 

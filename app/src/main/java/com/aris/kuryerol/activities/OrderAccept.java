@@ -1,6 +1,7 @@
 package com.aris.kuryerol.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -21,6 +22,9 @@ public class OrderAccept extends AppCompatActivity {
         setContentView(R.layout.activity_order_accept);
 
 
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
 
 
         Button button = findViewById(R.id.btn_goturdum);

@@ -25,6 +25,8 @@ public class MaketDialog extends AppCompatActivity {
         setContentView(R.layout.activity_maket_dialog);
 
 
+
+
         Button button = findViewById(R.id.btn_yoxla);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
