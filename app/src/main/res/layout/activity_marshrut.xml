@@ -10,14 +10,15 @@
 
     <com.yandex.mapkit.mapview.MapView
         android:id="@+id/mapview"
-        android:layout_width="412dp"
-        android:layout_height="577dp"
-        android:layout_marginTop="23dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_weight="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_bias="0.625" />
 
     <TextView
         android:id="@+id/textView17"
@@ -25,10 +26,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="Cafe City Statistika"
+        android:layout_marginBottom="3dp"
         android:fontFamily="@font/montserrat_medium"
+        android:text="Cafe City Statistika"
         android:textColor="#000"
         android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView18"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
@@ -38,11 +41,12 @@
         android:layout_width="395dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat_regular"
         android:text="M. Axundov 6 "
         android:textColor="#000"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/mapview"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />

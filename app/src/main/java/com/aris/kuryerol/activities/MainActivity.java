@@ -2,8 +2,10 @@ package com.aris.kuryerol.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -22,11 +24,22 @@ import com.aris.kuryerol.activities.drawermenu.FasileActivity;
 import com.aris.kuryerol.activities.drawermenu.OnlineChatActivity;
 import com.aris.kuryerol.activities.drawermenu.SifarishlerimActivitiy;
 import com.aris.kuryerol.activities.drawermenu.StartWork;
+import com.aris.kuryerol.activities.expandleList.ExpandleAdapter;
 import com.google.android.material.navigation.NavigationView;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+    ExpandleAdapter listAdapter;
+    ExpandableListView expListView;
+    List<String> listDataHeader =new ArrayList<>();
+    HashMap<String, List<Object>> listDataChild = new HashMap<>();
+    private static final String TAG = "ArchiveActivity";
+    ////////////////////
     DrawerLayout drawerLayout;
     ActionBarDrawerToggle drawerToggle;
     Toolbar toolbar;
@@ -39,7 +52,47 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+
+
+        // get the listview
+        expListView = findViewById(R.id.lvExp);
+        // preparing list data
+
+
+
+
+        Log.e(TAG, "onCreate: "+listDataHeader );
+        Log.e(TAG, "onCreate: "+listDataChild );
+        listAdapter = new ExpandleAdapter( listDataHeader, listDataChild);
+
+        expListView.setAdapter(listAdapter);
+
+        prepareListData();
+        listAdapter.notifyDataSetChanged();
+
+        // setting list adapter
     }
+
+    /*
+     * Preparing the list data
+     */
+    private void prepareListData() {
+        listDataHeader.add("YG - 102345");
+        listDataHeader.add("YG - 1023456");
+
+
+        // Adding child data
+        List<Object> top250 = new ArrayList<>();
+        top250.add("M. Axundov 26");
+        top250.add(2.0);
+        top250.add(2.0);
+        top250.add(2.0);
+        top250.add(1.1f);
+
+        listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
+        listDataChild.put(listDataHeader.get(1), top250); // Header, Child data
+    }
+
 
     private void initViews() {
 
@@ -89,7 +142,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, StartWork.class));
                 break;
             case R.id.cari_sifaris:
-                startActivity(new Intent(this, SifarishlerimActivitiy.class));
+                startActivity(new Intent(this, OrderAccept.class));
                 break;
             case R.id.nav_fasile:
                 startActivity(new Intent(this, FasileActivity.class));
@@ -123,6 +176,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 });
                 break;
         }
+
+
     }
 }
 

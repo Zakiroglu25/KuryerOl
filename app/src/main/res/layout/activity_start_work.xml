@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".activities.drawermenu.StartWork">
 
 
@@ -169,6 +170,7 @@
         android:layout_marginTop="132dp"
         android:paddingLeft="16dp"
         android:text="Geyim"
+        android:buttonTintMode="multiply"
         android:fontFamily="@font/montserrat_semibold"
         android:button="@drawable/custom_checkbox"
         android:textSize="16dp"
@@ -193,4 +195,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

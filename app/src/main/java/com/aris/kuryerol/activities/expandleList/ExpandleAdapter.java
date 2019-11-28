@@ -3,6 +3,7 @@ package com.aris.kuryerol.activities.expandleList;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,9 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
     private final int HEADER = 2;
     private final int FOOTER = 3;
 
+    
+
+
 
     public ExpandleAdapter(List<String> listDataHeader,
                            HashMap<String, List<Object>> listChildData) {
@@ -40,7 +44,8 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
                 .get(childPosititon);
     }
 
-    @Override
+
+            @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }

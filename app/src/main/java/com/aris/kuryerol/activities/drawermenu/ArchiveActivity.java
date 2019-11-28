@@ -2,8 +2,12 @@ package com.aris.kuryerol.activities.drawermenu;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.ExpandableListView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.aris.kuryerol.R;
 import com.aris.kuryerol.activities.expandleList.ExpandleAdapter;
@@ -12,7 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ArchiveActivity extends Activity {
+public class ArchiveActivity extends AppCompatActivity {
 
     ExpandleAdapter listAdapter;
     ExpandableListView expListView;
@@ -26,6 +30,14 @@ public class ArchiveActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_archive);
+
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
+
+
+
+
 
         // get the listview
         expListView = findViewById(R.id.lvExp);
