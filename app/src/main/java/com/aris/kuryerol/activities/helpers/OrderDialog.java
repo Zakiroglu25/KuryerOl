@@ -12,8 +12,10 @@ import android.widget.TextView;
 import com.aris.kuryerol.R;
 
 public class OrderDialog {
+
     public Button btnOrder;
     public Dialog dialog = null;
+
     public void showDialog(final Activity activity, String text) {
 
         dialog = new Dialog(activity);

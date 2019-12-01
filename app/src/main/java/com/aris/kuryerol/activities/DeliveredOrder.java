@@ -57,18 +57,14 @@ public class DeliveredOrder extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                BottomDialog dialog = new BottomDialog();
-                dialog.showDialog(DeliveredOrder.this, "Sifarişin çatdırılmasını təsdiqlə");
 
-                dialog.btnAccept.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(DeliveredOrder.this, MainActivity.class);
-                        startActivity(intent);
-                        dialog.dialog.dismiss();
-                    }
-                });
+                BottomDialog.from(DeliveredOrder.this).setTitle("Sifarişin çatdırılmasını təsdiqlə").setOnAcceptListener(() -> {
+                    Intent deIntent = new Intent(DeliveredOrder.this, MainActivity.class);
+                    startActivity(deIntent);
+                }).show();
+
             }
         });
+
     }
 }

@@ -1,6 +1,7 @@
 package com.aris.kuryerol.activities;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -136,7 +137,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, OnlineChatActivity.class));
                 break;
             case R.id.nav_office_call:
-                startActivity(new Intent(this, CallOfficceActivity.class));
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:123456789"));
+                startActivity(intent);
                 break;
             case R.id.nav_startwork:
                 startActivity(new Intent(this, StartWork.class));

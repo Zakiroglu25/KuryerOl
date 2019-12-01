@@ -36,6 +36,18 @@
         app:layout_constraintTop_toBottomOf="@+id/mapview" />
 
     <TextView
+        android:id="@+id/textView6"
+        android:layout_width="56dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="13:32"
+        android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+    <TextView
         android:id="@+id/textView16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -86,10 +98,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/btn_sifarish_green"
+        android:onClick="onClick"
         android:text="Telefon"
         android:textAllCaps="false"
         android:textColor="#fff"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsifa"
         app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_sg"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -103,20 +116,22 @@
         android:background="@drawable/sifaris_yellow_btn"
         android:text="Marşrut"
         android:textAllCaps="false"
+        android:onClick="onClick"
         android:textColor="#fff"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsifa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/btn_telefon_sc" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonsifa"
         android:layout_width="179dp"
         android:layout_height="44dp"
         android:layout_marginStart="20dp"
         android:layout_marginBottom="60dp"
         android:background="@drawable/copy"
         android:text="Sifariş"
+        android:onClick="onClick"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/btn_goturdum"
         app:layout_constraintEnd_toEndOf="parent"
@@ -131,7 +146,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">>
+        tools:ignore="MissingConstraints">
+
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -147,16 +163,17 @@
         android:id="@+id/btn_goturdum"
         android:layout_width="218dp"
         android:layout_height="48dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="176dp"
         android:layout_marginBottom="55dp"
         android:background="@drawable/btn_sifariscatdirildi"
-        android:onClick="dialogevent"
+        android:onClick="onClick"
         android:text="Sifarişi götürdüm"
         android:textAllCaps="false"
         android:textColor="#fff"
-        android:textSize="18dp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="parent" />
 
 
