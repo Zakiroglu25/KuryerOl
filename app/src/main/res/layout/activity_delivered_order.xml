@@ -11,9 +11,11 @@
     <com.yandex.mapkit.mapview.MapView
         android:id="@+id/mapview"
         android:layout_width="0dp"
-        android:layout_height="267dp"
+        android:layout_height="250dp"
         android:layout_marginEnd="1dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +23,7 @@
 
     <TextView
         android:id="@+id/textView17"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
         android:layout_marginTop="20dp"
@@ -30,46 +32,21 @@
         android:textColor="#000"
         android:textSize="19sp"
         app:layout_constraintEnd_toStartOf="@+id/textView22"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapview" />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="YG - 102345"
-        android:textColor="#B6263E"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView19" />
-
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="21dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:text="Sifariş nömrəsi"
-        android:textColor="#B6263E"
-        android:textSize="19sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <TextView
         android:id="@+id/textView18"
-        android:layout_width="177dp"
-        android:layout_height="39dp"
+        android:layout_width="330dp"
+        android:layout_height="34dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="15dp"
         android:fontFamily="@font/montserrat_medium"
         android:text="R.Behbudov 28, m 10,  blok 2, mertebe 5, qapı kodu 1221"
         android:textColor="#656565"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,31 +57,33 @@
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/btn_sifarish_green"
+        android:onClick="onClick"
         android:text="Telefon"
         android:textAllCaps="false"
         android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsifa"
         app:layout_constraintEnd_toStartOf="@+id/btn_marshurut_sg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_marshurut_sg"
         android:layout_width="0dp"
         android:layout_height="44dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/sifaris_yellow_btn"
+        android:onClick="onClick"
         android:text="Marşrut"
         android:textAllCaps="false"
         android:textColor="#fff"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsifa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/btn_telefon_sc"
-        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+        app:layout_constraintStart_toEndOf="@+id/btn_telefon_sc" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -129,12 +108,12 @@
     <Button
         android:id="@+id/btn_goturdum"
         android:layout_width="0dp"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="45dp"
         android:background="@drawable/btn_sifariscatdirildi"
-        android:onClick="dialogevent"
+        android:onClick="onClick"
         android:text="Sifariş çatdırıldı"
         android:textAllCaps="false"
         android:textColor="#fff"
@@ -148,15 +127,15 @@
         android:layout_width="179dp"
         android:layout_height="44dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/copy"
-        android:text="Sifariş"
         android:onClick="onClick"
+        android:text="Sifariş"
         android:textAllCaps="false"
         app:layout_constraintBottom_toTopOf="@+id/btn_goturdum"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_telefon_sc"
-        app:layout_constraintVertical_bias="0.222" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView22"
@@ -169,6 +148,40 @@
         app:layout_constraintBottom_toBottomOf="@+id/textView17"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView17" />
+
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="20dp"
+        android:text="YG - 102345"
+        android:textColor="#B6263E"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_telefon_sc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView19"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Sifariş nömrəsi"
+        android:textColor="#B6263E"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

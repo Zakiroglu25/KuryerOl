@@ -54,13 +54,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         initViews();
 
-
-        // get the listview
+        // get the listvie
         expListView = findViewById(R.id.lvExp);
         // preparing list data
-
-
-
 
         Log.e(TAG, "onCreate: "+listDataHeader );
         Log.e(TAG, "onCreate: "+listDataChild );
@@ -113,18 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
-//        Menu menu = navigationView.getMenu();
-//        MenuItem menuItem = menu.findItem(R.id.nav_switch);
-//        View actionView = MenuItemCompat.getActionView(menuItem);
-//
-//        switcher = (SwitchCompat) actionView.findViewById(R.id.switcher);
-//        switcher.setChecked(true);
-//        switcher.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Snackbar.make(v, (switcher.isChecked()) ? "is checked!!!" : "not checked!!!", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
-//            }
-//        });
+
     }
 
     @Override

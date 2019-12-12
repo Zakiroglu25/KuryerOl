@@ -1,8 +1,6 @@
 package com.aris.kuryerol.activities.drawermenu;
 
-import android.app.Activity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.ExpandableListView;
 
@@ -16,14 +14,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+
 public class ArchiveActivity extends AppCompatActivity {
+
 
     ExpandleAdapter listAdapter;
     ExpandableListView expListView;
     List<String> listDataHeader =new ArrayList<>();
-
-
     HashMap<String, List<Object>> listDataChild = new HashMap<>();
+
+
     private static final String TAG = "ArchiveActivity";
 
     @Override
@@ -31,20 +31,8 @@ public class ArchiveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_archive);
 
-        Toolbar myChildToolbar =
-                findViewById(R.id.toolbar);
-        setSupportActionBar(myChildToolbar);
-
-
-
-
-
-        // get the listview
         expListView = findViewById(R.id.lvExp);
         // preparing list data
-
-
-
 
         Log.e(TAG, "onCreate: "+listDataHeader );
         Log.e(TAG, "onCreate: "+listDataChild );
@@ -76,6 +64,14 @@ public class ArchiveActivity extends AppCompatActivity {
 
         listDataChild.put(listDataHeader.get(0), top250); // Header, Child data
         listDataChild.put(listDataHeader.get(1), top250); // Header, Child data
+
+        Toolbar myChildToolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(myChildToolbar);
+
+
+
+
     }
 
 }

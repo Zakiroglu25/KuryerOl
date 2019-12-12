@@ -9,12 +9,13 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="0dp"
-        android:layout_height="190dp"
+        android:layout_height="135dp"
         android:layout_marginStart="1dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="1dp"
         android:background="#F3F3F3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,9 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="Sifariş nömrəsi"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat_medium"
+            android:text="Sifariş nömrəsi"
             android:textColor="#B6263E"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -36,9 +37,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
-            android:text="YG - 102345"
+            android:layout_marginTop="1dp"
             android:fontFamily="@font/montserrat_medium"
+            android:text="YG - 102345"
             android:textColor="#B6263E"
             android:textSize="16dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,54 +47,57 @@
 
         <TextView
             android:id="@+id/cafe_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Cafe City (statistika)"
             android:fontFamily="@font/montserrat_semibold"
+            android:text="Cafe City (statistika)"
             android:textColor="#290D44"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.502" />
+            app:layout_constraintTop_toBottomOf="@+id/order_number"
+            app:layout_constraintVertical_bias="0.122" />
 
         <TextView
             android:id="@+id/cafe_number"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="5dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="012 345 67 89"
             android:textColor="#290D44"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cafe_name" />
 
         <TextView
             android:id="@+id/cafe_address"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
             android:fontFamily="@font/montserrat_regular"
             android:text="M. Axundov 26"
             android:textColor="#290D44"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/cafe_number" />
 
         <TextView
             android:id="@+id/order_date"
             android:layout_width="123dp"
-            android:fontFamily="@font/montserrat_medium"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="3dp"
             android:layout_marginBottom="142dp"
+            android:fontFamily="@font/montserrat_medium"
             android:text="15 oktyabr 2019  15:32"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.054" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

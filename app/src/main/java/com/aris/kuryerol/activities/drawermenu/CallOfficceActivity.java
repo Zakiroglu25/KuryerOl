@@ -20,18 +20,18 @@ public class CallOfficceActivity extends AppCompatActivity {
 
 
 
-    Button telefon = findViewById(R.id.btn_office_call);
-
-    telefon.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String s = "10digits";
-
-            Intent callIntent = new Intent(Intent.ACTION_DIAL);
-            callIntent.setData(Uri.parse("tel:123456789"));
-            startActivity(callIntent);
-        }
-    });
+//    Button telefon = findViewById(R.id.btn_office_call);
+//
+//    telefon.setOnClickListener(new View.OnClickListener() {
+//        @Override
+//        public void onClick(View v) {
+//            String s = "10digits";
+//
+//            Intent callIntent = new Intent(Intent.ACTION_DIAL);
+//            callIntent.setData(Uri.parse("tel:123456789"));
+//            startActivity(callIntent);
+//        }
+//    });
 
     }
 }

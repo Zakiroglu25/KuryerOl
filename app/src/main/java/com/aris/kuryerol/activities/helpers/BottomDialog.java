@@ -1,13 +1,9 @@
 package com.aris.kuryerol.activities.helpers;
 
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
-import android.view.Gravity;
-import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -43,7 +39,6 @@ public class BottomDialog extends Dialog {
         setCancelable(false);
         setContentView(R.layout.bottom_dialog_ordee_accepted);
 
-
         findViewById(R.id.button8).setOnClickListener(v -> dismiss());
     }
 
@@ -63,25 +58,10 @@ public class BottomDialog extends Dialog {
         });
         return this;
     }
-
     public void showDialog(Context context, String text) {
 
 
-//        WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
 
-//        lp.copyFrom(dialog.getWindow().getAttributes());
-//        lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-//        lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-//        lp.gravity = Gravity.CENTER;
-
-//        dialog.getWindow().setAttributes(lp);
-
-//        dialog.getWindow().setAttributes(lp);
-
-//        btnAccept = dialog.findViewById(R.id.button_beli);
-//
-//        Button btnReject = dialog
-//        dialog.show();
 
     }
 }

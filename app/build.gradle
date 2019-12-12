@@ -41,5 +41,7 @@ dependencies {
     implementation 'com.yandex.android:transport:3.3.1'
     implementation 'com.github.hajiyevelnur92:intentanimation:1.0'
 
+    implementation 'com.ornach.nobobutton:nobobutton:1.6'
+
 
 }

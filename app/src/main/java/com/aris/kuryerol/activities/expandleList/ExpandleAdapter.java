@@ -3,17 +3,13 @@ package com.aris.kuryerol.activities.expandleList;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.util.Log;
-import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.aris.kuryerol.R;
-import com.aris.kuryerol.activities.drawermenu.StartWork;
-import com.aris.kuryerol.activities.models.Header;
 
 import java.util.HashMap;
 import java.util.List;
@@ -38,6 +34,7 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
         this.hashMap = listChildData;
     }
 
+    ///
     @Override
     public Object getChild(int groupPosition, int childPosititon) {
         return this.hashMap.get(this.headers.get(groupPosition))
@@ -45,11 +42,14 @@ public class ExpandleAdapter extends BaseExpandableListAdapter {
     }
 
 
+    //
             @Override
     public long getChildId(int groupPosition, int childPosition) {
         return childPosition;
     }
 
+
+    //
     @Override
     public View getChildView(int groupPosition, final int childPosition,
                              boolean isLastChild, View convertView, ViewGroup parent) {

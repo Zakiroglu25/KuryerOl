@@ -89,7 +89,6 @@ public class OrderAccept extends AppCompatActivity {
         CheckBox ch3 = view.findViewById(R.id.checkBox7);
         CheckBox ch4 = view.findViewById(R.id.checkBox8);
 
-
         ch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,6 +128,8 @@ public class OrderAccept extends AppCompatActivity {
         btn_yoxla.setOnClickListener(view1 -> {
             Log.e(TAG, "onClick: accept button");
             alertDialog.dismiss();
+
+
         });
 
 
